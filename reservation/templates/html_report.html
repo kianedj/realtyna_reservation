@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel's Guest Reserved List</title>
+</head>
+<body>
+    <h1>Hotel's Guest Reserved List</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Hotel</th>
+            <th>Room No.</th>
+            <th>Date of entrance</th>
+            <th>Date of exit</th>
+        </tr>
+
+{% for item in reservations %}
+        <tr>
+            <td>{{item.guest.name}}</td>
+            <td>{{item.room.hotel}}</td>
+            <td>{{item.room}}</td>
+            <td>{{item.start_date}}</td>
+            <td>{{item.end_date}}</td>
+        </tr>
+{% endfor %}
+</table>
+</body>
+</html>
